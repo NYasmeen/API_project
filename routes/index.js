@@ -19,7 +19,7 @@ router.get('/', function (req, res, next) {
         res.render('index', { title: quote });
       })
       .catch(function (error) {
-        res.render('error',{message : "OOPS! INVALID URL"});
+        res.render('error',{message : "OOPS! Something's not right. Check the API and try again."});
       })
 
   }();
