@@ -8,7 +8,7 @@ router.get('/', function (req, res, next) {
 
   var callapi = function () {
     var updated = []
-    var url = 'https://jsonplaceholder.typicode.com/photos';
+    var url = 'httaceholder.typicode.com/photos';
 
     axios.get(url)
       .then(function (response) {
@@ -19,7 +19,7 @@ router.get('/', function (req, res, next) {
         res.render('index', { title: quote });
       })
       .catch(function (error) {
-        console.log(error);
+        res.render('error',{message : "OOPS! INVALID URL"});
       })
 
   }();
